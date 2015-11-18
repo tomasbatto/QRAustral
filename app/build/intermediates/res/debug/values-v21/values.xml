@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/Nicolas/Documents/Projects/QRAustral/app/src/main/res/values-v21/styles.xml -->
+    <eat-comment/>
+    <color name="accent">#03A9F4</color>
+    <color name="primary">#3F51B5</color>
+    <color name="primary_dark">#303F9F</color>
+    <style name="AppTheme" parent="android:Theme.Material.NoActionBar">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <!--<item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewLight</item>-->
+        <!--<item name="android:dropDownItemStyle">@style/Widget.DropDownItemLight</item>-->
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:colorAccent">@color/accent</item>
+
+    </style>
+</resources>
