@@ -40,15 +40,257 @@ var World = {
 				roll: -25
 			}
 		});
-
+        this.modelPipes = new AR.Model("assets/pipes.wt3", {
+        			onLoaded: this.loadingStep,
+        			scale: {
+        				x: 0.1,
+        				y: 0.1,
+        				z: 0.1
+        			},
+        			translate: {
+        				x: 0.0,
+        				y: 0.05,
+        				z: 0.0
+        			},
+        			rotate: {
+        				roll: 45,
+        				tilt: 90
+        			}
+        		});
+		this.modelEarth = new AR.Model("assets/earth.wt3", {
+        			onLoaded: this.loadingStep,
+        			scale: {
+        				x: 0.5,
+        				y: 0.5,
+        				z: 0.5
+        			},
+        			translate: {
+        				x: 0.0,
+        				y: 0.1,
+        				z: 0.5
+        			},
+        			rotate: {
+        				roll: -25,
+        				tilt: 90
+        			}
+        		});
+        this.modelJupiter = new AR.Model("assets/jupiter.wt3", {
+           			onLoaded: this.loadingStep,
+           			scale: {
+           				x: 0.5,
+           				y: 0.5,
+           				z: 0.5
+           			},
+           			translate: {
+           				x: 0.0,
+           				y: 0.1,
+           				z: 0.5
+           			},
+           			rotate: {
+           				roll: -25,
+           				tilt: 90
+           			}
+           		});
+        this.modelMars = new AR.Model("assets/mars.wt3", {
+        			onLoaded: this.loadingStep,
+        			scale: {
+        				x: 0.5,
+        				y: 0.5,
+        				z: 0.5
+        			},
+        			translate: {
+        				x: 0.0,
+        				y: 0.1,
+        				z: 0.5
+        			},
+        			rotate: {
+        				roll: -25,
+        				tilt: 90
+        			}
+        		});
+        this.modelMercury = new AR.Model("assets/mercury.wt3", {
+        			onLoaded: this.loadingStep,
+        			scale: {
+        				x: 0.5,
+        				y: 0.5,
+        				z: 0.5
+        			},
+        			translate: {
+        				x: 0.0,
+        				y: 0.1,
+        				z: 0.5
+        			},
+        			rotate: {
+        				roll: -25,
+        				tilt: 90
+        			}
+        		});
+        this.modelNeptune = new AR.Model("assets/neptune.wt3", {
+        			onLoaded: this.loadingStep,
+        			scale: {
+        				x: 0.5,
+        				y: 0.5,
+        				z: 0.5
+        			},
+        			translate: {
+        				x: 0.0,
+        				y: 0.1,
+        				z: 0.5
+        			},
+        			rotate: {
+        				roll: -25,
+        				tilt: 90
+        			}
+        		});
+        this.modelPluto = new AR.Model("assets/pluto.wt3", {
+        			onLoaded: this.loadingStep,
+        			scale: {
+        				x: 0.5,
+        				y: 0.5,
+        				z: 0.5
+        			},
+        			translate: {
+        				x: 0.0,
+        				y: 0.1,
+        				z: 0.5
+        			},
+        			rotate: {
+        				roll: -25,
+        				tilt: 90
+        			}
+        		});
+        this.modelSaturn = new AR.Model("assets/saturn.wt3", {
+        			onLoaded: this.loadingStep,
+        			scale: {
+        				x: 0.5,
+        				y: 0.5,
+        				z: 0.5
+        			},
+        			translate: {
+        				x: 0.0,
+        				y: 0.1,
+        				z: 0.5
+        			},
+        			rotate: {
+        				roll: -25,
+        				tilt: 90
+        			}
+        		});
+        this.modelSun = new AR.Model("assets/sun.wt3", {
+        			onLoaded: this.loadingStep,
+        			scale: {
+        				x: 0.5,
+        				y: 0.5,
+        				z: 0.5
+        			},
+        			translate: {
+        				x: 0.0,
+        				y: 0.1,
+        				z: 0.5
+        			},
+        			rotate: {
+        				roll: -25,
+        				tilt: 90
+        			}
+        		});
+        this.modelUranus = new AR.Model("assets/uranus.wt3", {
+        			onLoaded: this.loadingStep,
+        			scale: {
+        				x: 0.5,
+        				y: 0.5,
+        				z: 0.5
+        			},
+        			translate: {
+        				x: 0.0,
+        				y: 0.1,
+        				z: 0.5
+        			},
+        			rotate: {
+        				roll: -25,
+        				tilt: 90
+        			}
+        		});
+        this.modelVenus = new AR.Model("assets/venus.wt3", {
+        			onLoaded: this.loadingStep,
+        			scale: {
+        				x: 0.5,
+        				y: 0.5,
+        				z: 0.5
+        			},
+        			translate: {
+        				x: 0.0,
+        				y: 0.1,
+        				z: 0.5
+        			},
+        			rotate: {
+        				roll: -25,
+        				tilt: 90
+        			}
+        		});
 		/*
 			Similar to 2D content the 3D model is added to the drawables.cam property of an AR.Trackable2DObject.
 		*/
-		var trackable = new AR.Trackable2DObject(this.tracker, "*", {
+		var trackable1 = new AR.Trackable2DObject(this.tracker, "qr-auto", {
 			drawables: {
 				cam: [this.modelCar]
 			}
-		});
+        });
+        var trackable2 = new AR.Trackable2DObject(this.tracker, "qr-pipes", {
+        	drawables: {
+        		 cam: [this.modelPipes]
+  			}
+        });
+         var trackable3 = new AR.Trackable2DObject(this.tracker, "qr-earth", {
+                	drawables: {
+                		 cam: [this.modelEarth]
+          			}
+                });
+          var trackable4 = new AR.Trackable2DObject(this.tracker, "qr-jupiter", {
+                 	drawables: {
+                 		 cam: [this.modelJupiter]
+           			}
+                 });
+          var trackable5 = new AR.Trackable2DObject(this.tracker, "qr-mars", {
+                 	drawables: {
+                 		 cam: [this.modelMars]
+           			}
+                 });
+	     var trackable6 = new AR.Trackable2DObject(this.tracker, "qr-mercury", {
+                	drawables: {
+                		 cam: [this.modelMercury]
+          			}
+                });
+         var trackable7 = new AR.Trackable2DObject(this.tracker, "qr-neptune", {
+                	drawables: {
+                		 cam: [this.modelNeptune]
+          			}
+                });
+	     var trackable8 = new AR.Trackable2DObject(this.tracker, "qr-pluto", {
+                	drawables: {
+                		 cam: [this.modelPluto]
+          			}
+                });
+         var trackable9 = new AR.Trackable2DObject(this.tracker, "qr-saturn", {
+                	drawables: {
+                		 cam: [this.modelSaturn]
+          			}
+                });
+         var trackable10 = new AR.Trackable2DObject(this.tracker, "qr-sun", {
+                	drawables: {
+                		 cam: [this.modelSun]
+          			}
+                });
+         var trackable11 = new AR.Trackable2DObject(this.tracker, "qr-uranus", {
+                	drawables: {
+                		 cam: [this.modelUranus]
+          			}
+                });
+         var trackable12 = new AR.Trackable2DObject(this.tracker, "qr-venus", {
+                	drawables: {
+                		 cam: [this.modelVenus]
+          			}
+                });
+
 	},
 
 	loadingStep: function loadingStepFn() {
@@ -56,9 +298,6 @@ var World = {
 			World.loaded = true;
 			var cssDivLeft = " style='display: table-cell;vertical-align: middle; text-align: right; width: 50%; padding-right: 15px;'";
 			var cssDivRight = " style='display: table-cell;vertical-align: middle; text-align: left;'";
-			document.getElementById('loadingMessage').innerHTML =
-				"<div" + cssDivLeft + ">Scan CarAd ClientTracker Image:</div>" +
-				"<div" + cssDivRight + "><img src='assets/car.png'></img></div>";
 
 			// Remove Scan target message after 10 sec.
 			setTimeout(function() {
